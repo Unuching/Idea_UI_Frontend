@@ -1,7 +1,7 @@
 import { createFileRoute } from '@tanstack/react-router';
 
 const fetchData = async (ideaId: string) => {
-  const res = await fetch(`http://localhost:8000/ideas/${ideaId}`);
+  const res = await fetch(`/api/ideas/${ideaId}`);
 
   if (!res.ok) throw new Error('Failed to fetch data');
 
