@@ -1,7 +1,8 @@
 import { createFileRoute, Link } from '@tanstack/react-router';
 import { queryOptions, useSuspenseQuery } from '@tanstack/react-query';
+import type { Idea } from '@/types';
 
-const fetchData = async (ideaId: string) => {
+const fetchData = async (ideaId: string): Promise<Idea> => {
   const res = await fetch(`/api/ideas/${ideaId}`);
 
   if (!res.ok) throw new Error('Failed to fetch data');
@@ -25,5 +26,13 @@ export const Route = createFileRoute('/ideas/$ideaId/')({
 function IdeaDetailsPage() {
   const { ideaId } = Route.useParams();
   const { data: idea } = useSuspenseQuery(ideaQueryOptions(ideaId));
-  return <div>{idea.title}</div>;
+  return (
+    <div className='p-4'>
+      <Link to='/ideas' className='text-blue-500 underline block mb-4'>
+        Back To Ideas
+      </Link>
+      <h2 className='text-2xl font-bold'>{idea.title}</h2>
+      <p className='mt-2'>{idea.description}</p>
+    </div>
+  );
 }
