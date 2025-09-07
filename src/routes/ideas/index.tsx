@@ -44,7 +44,13 @@ function IdeasPage() {
               <h2 className='text-lg font-semibold'>{idea.title}</h2>
               <p className='text-gray-700 mt-2'>{idea.summary}</p>
             </div>
-            <Link to=''>View Ideas</Link>
+            <Link
+              to='/ideas/$ideaId'
+              params={{ ideaId: idea.id.toString() }}
+              className='text-center mt-4 inline-block bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition'
+            >
+              View Ideas
+            </Link>
           </li>
         ))}
       </ul>

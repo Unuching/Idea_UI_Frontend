@@ -24,7 +24,11 @@ export const Route = createRootRouteWithContext<RouterContext>()({
       },
     ],
   }),
-  component: () => (
+  component: RootLayout,
+});
+
+function RootLayout() {
+  return (
     <>
       <HeadContent />
       <Outlet />
@@ -40,5 +44,5 @@ export const Route = createRootRouteWithContext<RouterContext>()({
         ]}
       />
     </>
-  ),
-});
+  );
+}
