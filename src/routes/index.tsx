@@ -1,4 +1,4 @@
-import { createFileRoute, Link } from '@tanstack/react-router';
+import { createFileRoute } from '@tanstack/react-router';
 import { Lightbulb } from 'lucide-react';
 import { fetchIdeas } from '@/api/ideas';
 import { queryOptions, useSuspenseQuery } from '@tanstack/react-query';
