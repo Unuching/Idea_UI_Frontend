@@ -26,5 +26,18 @@ export const createIdea = async (newIdea: {
 };
 
 export const deteteIdea = async (ideaId: string): Promise<void> => {
-  await api.delete(`/ideas/${ideaId}`)
+  await api.delete(`/ideas/${ideaId}`);
+};
+
+export const updateIdea = async (
+  ideaId: string,
+  updatedData: {
+    title: string;
+    summary: string;
+    description: string;
+    tags: string[];
+  }
+): Promise<Idea> => {
+  const res = await api.put(`/ideas/${ideaId}`, updatedData);
+  return res.data;
 };

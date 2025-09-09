@@ -73,15 +73,14 @@
       "createdAt": "2025-04-24T13:10:00.000Z"
     },
     {
-      "id": "ed9d",
       "title": "My new Idea",
       "summary": "a bookstore",
-      "description": "booking books from a farm",
+      "description": "booking books from a farm and do it again",
       "tags": [
         "book",
         "farm"
       ],
-      "createdAt": "2025-09-08T15:45:24.734Z"
+      "id": "ed9d"
     }
   ]
 }
