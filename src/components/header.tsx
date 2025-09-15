@@ -27,18 +27,17 @@ const Header = () => {
           </Link>
         </nav>
         {/*Auth Button*/}
-        <div className='flex items-center space-y-2'>
+        <div className='flex items-center space-x-2'>
           <Link
             to='/login'
             className='text-gray-600 hover:text-gray-700 font-medium transition  px-3 py-2 leading-none'
           >
             Login
           </Link>
-        </div>
-        <div className='flex items-center space-y-2'>
+
           <Link
             to='/register'
-            className='text-gray-600 hover:text-gray-700 font-medium transition  px-4 py-2 rounded-md leading-none'
+            className='bg-gray-200 hover:bg-gray-300 text-gray-600 font-medium transition  px-4 py-2 rounded-md leading-none'
           >
             Register
           </Link>
